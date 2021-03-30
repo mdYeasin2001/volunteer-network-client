@@ -5,7 +5,7 @@ const Home = () => {
     const [events, setEvents] = useState([]);
     console.log(events);
     useEffect(() => {
-        fetch('http://localhost:5000/events')
+        fetch('https://obscure-refuge-80954.herokuapp.com/events')
             .then(res => res.json())
             .then(data => setEvents(data))
     }, [])
@@ -26,7 +26,7 @@ const Home = () => {
             </div>
 
             <div className="row row-cols-1 row-cols-md-3 g-4">
-                {events.map((event, i) => <Event event={event} key={i}/> )}
+                {events.map((event, i) => <Event event={event} key={i} />)}
             </div>
         </div>
     );

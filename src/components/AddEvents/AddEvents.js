@@ -8,7 +8,7 @@ const AddEvents = () => {
     const onSubmit = data => {
         const eventData = {eventName: data.name, image: imageURL}
         console.log(eventData);
-        fetch('http://localhost:5000/addEvent', {
+        fetch('https://obscure-refuge-80954.herokuapp.com/addEvent', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify(eventData)
